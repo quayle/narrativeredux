@@ -8,13 +8,14 @@
 function WriteStandardMenu() {
     print("<ul class='menu-list'>");
     print  ("<li class='menu-item menu-home'>");
-    Report.WriteFormatted("<a href='./index.html' title='{0}'></a>", Dic("AltHome"));
+//    theme('link', new array('value' => '', 'path' => 'index.html', 'attributes' =
+    print theme_link("", './index.html', options['attributes']['title'] = Dic("AltHome"));
     print  ("</li>");
     print  ("<li class='menu-item menu-toc menu-individual-toc'>");
-    Report.WriteFormatted("<a href='./individual_toc.html' title='{0}'></a>", Dic("AltIndividuals"));
+    print theme_link("", './individual_toc.html', options['attributes']['title'] = Dic("AltIndividuals"));
     print  ("</li>");
     print  ("<li class='menu-item menu-toc menu-family-toc'>");
-    Report.WriteFormatted("<a href='./family_toc.html' title='{0}'></a>", Dic("AltFamilies"));
+    print theme_link("", './individual_toc.html', options['attributes']['title'] = Dic("AltFamilies"));
     print  ("</li>");
     print  ("<li class='menu-container'></li>");
     print("</ul>");

@@ -29,6 +29,11 @@ while(!filename.atEnd()) {
   }
   filename.moveNext();
 }
+//
+  var file = fso.OpenTextFile(skn_dir + "Code\\core\\theme.js");
+  library.Write(file.ReadAll());
+  file.Close();
+
 library.Close();
 Report.LogComment('Abstraction completed');
 Report.AbortPage();
